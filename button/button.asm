@@ -6,11 +6,11 @@
 
 m1:	.org 0x10
 
-		ldi r16,0x01
+		ldi r16,0xFF
 		out ddrb,r16
 		ldi r17,0x00
 		out ddrd,r17
 step:   in r16,PORTD
-		out portb,r16 
-
+	out portb,r16
+	
         rjmp step
